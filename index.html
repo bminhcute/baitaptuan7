@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Bài Tập Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #444;
+      padding: 10px 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 5px 10px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      margin: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    section h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Website Bài Tập Layout</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#bai1">Bài 1</a></li>
+      <li><a href="#bai2">Bài 2</a></li>
+      <li><a href="#bai3">Bài 3</a></li>
+      <li><a href="#bai4">Bài 4</a></li>
+      <li><a href="#bai5">Bài 5</a></li>
+      <li><a href="#bai6">Bài 6</a></li>
+      <li><a href="#bai7">Bài 7</a></li>
+      <li><a href="#bai8">Bài 8</a></li>
+      <li><a href="#bai9">Bài 9</a></li>
+      <li><a href="#bai10">Bài 10</a></li>
+      <li><a href="#bai11">Bài 11</a></li>
+      <li><a href="#bai12">Bài 12</a></li>
+      <li><a href="#bai13">Bài 13</a></li>
+      <li><a href="#bai14">Bài 14</a></li>
+      <li><a href="#bai15">Bài 15</a></li>
+      <li><a href="#bai16">Bài 16</a></li>
+    </ul>
+  </nav>
+
+  <!-- Bài 1 -->
+  <section id="bai1">
+    <h2>Bài 1</h2>
+    <p>Nội dung: (Chưa có nội dung)</p>
+  </section>
+
+  <!-- Bài 2 -->
+  <section id="bai2">
+    <h2>Bài 2</h2>
+    <p>Nội dung: (Chưa có nội dung)</p>
+  </section>
+
+  <!-- Bài 3 -->
+  <section id="bai3">
+    <h2>Bài 3</h2>
+    <p>Nội dung: (Chưa có nội dung)</p>
+  </section>
+
+  <!-- Bài 4 -->
+  <section id="bai4">
+    <h2>Bài 4: Tạo bố cục dùng lưới</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Tạo 3 hàng và 3 cột.</li>
+      <li>
+        Kích thước:
+        <ul>
+          <li>Hàng đầu tiên cao 100px.</li>
+          <li>Hàng thứ hai tự động theo nội dung.</li>
+          <li>Hàng cuối cùng cao 50px.</li>
+        </ul>
+      </li>
+      <li>Mỗi cột rộng bằng nhau.</li>
+    </ul>
+  </section>
+
+  <!-- Bài 5 -->
+  <section id="bai5">
+    <h2>Bài 5: Chỉnh lại bố cục bài 4</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Tạo 3 cột với kích thước tỉ lệ 1:2:1.</li>
+      <li>Thêm khoảng cách các hàng là 5px.</li>
+    </ul>
+  </section>
+
+  <!-- Bài 6 -->
+  <section id="bai6">
+    <h2>Bài 6: Định vị phần tử bằng grid-column và grid-row</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Tạo bố cục 3x3.</li>
+      <li>Phần tử số 1 chiếm toàn bộ hàng đầu tiên.</li>
+      <li>Phần tử số 5 mở rộng từ cột 2 đến 3 ở hàng thứ hai.</li>
+    </ul>
+  </section>
+
+  <!-- Bài 7 -->
+  <section id="bai7">
+    <h2>Bài 7: Tạo layout header - content - footer với grid-template-areas</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Tạo layout cơ bản gồm:
+        <ul>
+          <li>Header (rộng 100%).</li>
+          <li>Content (giữa) và Sidebar (bên trái).</li>
+          <li>Footer (rộng 100%).</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Bài 8 -->
+  <section id="bai8">
+    <h2>Bài 8: Thiết kế Layout kiểu Blog</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Tạo bố cục với:
+        <ul>
+          <li>Header (trên cùng, rộng 100%).</li>
+          <li>Sidebar (bên trái).</li>
+          <li>Main Content (chiếm 2/3 không gian).</li>
+          <li>Aside (bên phải).</li>
+          <li>Footer (dưới cùng).</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Bài 9 -->
+  <section id="bai9">
+    <h2>Bài 9: Tạo bố cục theo mẫu</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Tạo giao diện với:
+        <ul>
+          <li>Thanh điều hướng (navbar).</li>
+          <li>Ảnh hero lớn (chiếm hết hàng đầu tiên).</li>
+          <li>3 ô dịch vụ nằm cạnh nhau.</li>
+          <li>Phần footer (cuối trang).</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Bài 10 -->
+  <section id="bai10">
+    <h2>Bài 10: Tạo bố cục theo mẫu</h2>
+    <p>Nội dung: (Chưa có nội dung chi tiết)</p>
+  </section>
+
+  <!-- Bài 11 -->
+  <section id="bai11">
+    <h2>Bài 11: Thiết kế web đáp ứng</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Xây dựng menu ở màn hình Laptop và iPad.</li>
+      <li>Xây dựng menu responsive với (max-width: 600px).</li>
+    </ul>
+  </section>
+
+  <!-- Bài 12 -->
+  <section id="bai12">
+    <h2>Bài 12: Thiết kế web đáp ứng</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Tạo bố cục như sau:
+        <ul>
+          <li>Trên màn hình laptop: hiển thị 4 item 1 dòng.</li>
+          <li>Trên màn hình máy tính bảng: hiển thị 2 item 1 dòng.</li>
+          <li>Trên màn hình mobile: hiển thị 1 item 1 dòng.</li>
+        </ul>
+      </li>
+      <li>Cỡ chữ:
+        <ul>
+          <li>14px → Cỡ chữ nhỏ nhất (trên điện thoại).</li>
+          <li>16px → Kích thước chữ theo phần trăm màn hình.</li>
+          <li>18px → Cỡ chữ lớn nhất (trên màn hình lớn).</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Bài 13 -->
+  <section id="bai13">
+    <h2>Bài 13: Thiết kế layout như sau</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Chuyển đổi layout có thể responsive thành 2 cột (max-width: 1200px) và 1 cột (max-width: 600px) khi thay đổi kích thước trình duyệt.</li>
+    </ul>
+  </section>
+
+  <!-- Bài 14 -->
+  <section id="bai14">
+    <h2>Bài 14</h2>
+    <p><strong>Yêu cầu:</strong></p>
+    <ul>
+      <li>Tạo bố cục như sau.</li>
+      <li>Thực hiện CSS thay đổi kích thước font chữ và hình ảnh khi chuyển thành 1 cột:
+        <ul>
+          <li>Responsive font size: font-size của body là 16px, khi responsive 1 cột thì font là 20px.</li>
+          <li>Responsive image: hình ảnh sẽ được thay đổi cùng tỉ lệ.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Bài 15 -->
+  <section id="bai15">
+    <h2>Bài 15</h2>
+    <p>Nội dung: (Chưa có nội dung)</p>
+  </section>
+
+  <!-- Bài 16 -->
+  <section id="bai16">
+    <h2>Bài 16</h2>
+    <p>Nội dung: (Chưa có nội dung)</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Website Bài Tập Layout</p>
+  </footer>
+
+</body>
+</html>
