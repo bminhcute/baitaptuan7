@@ -1,15 +1,140 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài 2</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chania Layout</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    /* Top Navigation */
+    .topnav {
+      background-color: #ff9999; /* Pink background for the top nav */
+      padding: 10px 0;
+      text-align: center;
+    }
+    .topnav a {
+      display: inline-block;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      padding: 8px;
+    }
+    .topnav a:hover {
+      background-color: #ffc0cb; /* Lighter pink on hover */
+    }
+
+    /* Container for Sidebar + Main Content */
+    .container {
+      display: flex;
+      min-height: 80vh; /* Just to ensure some space; adjust as needed */
+    }
+
+    /* Sidebar (Left Menu) */
+    .sidebar {
+      width: 200px;
+      background-color: #f8f8f8;
+      padding: 10px;
+    }
+    .vertical-menu a {
+      display: block;
+      background-color: #3399ff; /* Blue background for menu items */
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin-bottom: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .vertical-menu a:hover {
+      background-color: #007acc; /* Darker blue on hover */
+    }
+
+    /* Main Content */
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: #fff;
+    }
+    /* Large Blue Box for "The City" */
+    .titlebox {
+      background-color: #3399ff;
+      color: #fff;
+      text-align: center;
+      font-size: 24px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #99ccff; /* Light blue footer */
+      color: #000;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <h1>Bài 2</h1>
-  <p>Nội dung: (Chưa có nội dung)</p>
+
+  <!-- Top Navigation Bar -->
+  <div class="topnav">
+    <a href="#">Home</a>
+    <a href="#">News</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+  </div>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar (Left Menu) -->
+    <div class="sidebar">
+      <div class="vertical-menu">
+        <a href="#">The Flight</a>
+        <a href="#">The City</a>
+        <a href="#">The Island</a>
+        <a href="#">The Food</a>
+        <a href="#">The People</a>
+        <a href="#">The History</a>
+        <a href="#">The Oceans</a>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+      <div class="titlebox">The City</div>
+      <h2>Chania</h2>
+      <p>
+        Chania is the capital of the Chania region on the island of Crete. 
+        The city can be divided in two parts, the old town and the modern city.
+      </p>
+      <p>You will learn more about responsive web pages in a later chapter.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+        mollit anim id est laborum.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Footer Text
+  </div>
+
 </body>
 </html>
