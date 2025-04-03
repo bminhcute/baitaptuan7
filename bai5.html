@@ -1,19 +1,74 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài 5: Chỉnh lại bố cục bài 4</title>
+  <title>Grid Layout - 1:2:1 Columns</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
+    /* To occupy full viewport height if desired */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    body {
+      background-color: #2ecc71; /* Green background */
+      color: #fff;              /* White text */
+      font-family: Arial, sans-serif;
+    }
+
+    /* Grid container */
+    .grid-container {
+      display: grid;
+      /* 3 hàng: 100px, auto, 50px */
+      grid-template-rows: 100px auto 50px;
+      /* 3 cột với tỉ lệ 1 : 2 : 1 */
+      grid-template-columns: 1fr 2fr 1fr;
+      /* Chỉ tạo khoảng cách hàng là 5px (không thêm khoảng cách cột) */
+      row-gap: 5px;
+      /* Có thể thêm padding cho toàn bộ lưới nếu muốn */
+      padding: 10px;
+      min-height: 100%;
+    }
+
+    /* Chung cho các ô */
+    .grid-container > div {
+      border: 1px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    /* Ô ở giữa (hàng 2, cột 2) chứa văn bản dài */
+    .item5 {
+      text-align: justify;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
-  <h1>Bài 5: Chỉnh lại bố cục bài 4</h1>
-  <p><strong>Yêu cầu:</strong></p>
-  <ul>
-    <li>Tạo 3 cột với kích thước tỉ lệ 1:2:1.</li>
-    <li>Thêm khoảng cách các hàng là 5px.</li>
-  </ul>
+
+  <div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div class="item5">
+      5. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Vel voluptatum nam nobis quidem, delectus impedit et consequatur
+      quibusdam re quam quae id quo amet enim, fugit quam aliquam quas soluta.
+      Eius, labore! Fugiat nisi, voluptates nulla cupiditate nam similique?
+      Quasi, tenetur laboriosam doloribus facilis sunt quia quas.
+      Praesentium neque iure cumque et animi! Suscipit nesciunt incidunt
+      eveniet perspiciatis. Tenetur.
+    </div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </div>
+
 </body>
 </html>
