@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài 9: Tạo bố cục theo mẫu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NêTa Shop</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-  </style>
-</head>
-<body>
-  <h1>Bài 9: Tạo bố cục theo mẫu</h1>
-  <p><strong>Yêu cầu:</strong></p>
-  <ul>
-    <li>Tạo giao diện với:
-      <ul>
-        <li>Thanh điều hướng (navbar).</li>
-        <li>Ảnh hero lớn (chiếm hết hàng đầu tiên).</li>
-        <li>3 ô dịch vụ nằm cạnh nhau.</li>
-        <li>Phần footer (cuối trang).</li>
-      </ul>
-    </li>
-  </ul>
-</body>
-</html>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #007bff;
+    }
+    .navbar .menu {
+      display: flex;
+      gap: 1rem;
+    }
+    .navbar .menu a {
+      color: #007bff;
+      font-weight: 500;
+      padding: 0.5
