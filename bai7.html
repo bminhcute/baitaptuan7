@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grid Template Areas Layout</title>
+  <meta charset="UTF-8" />
+  <title>Grid Template Areas - Header, Sidebar, Content, Footer</title>
   <style>
-    /* Reset default browser styles */
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -12,29 +12,29 @@
     }
     body {
       font-family: Arial, sans-serif;
-      background-color: #fff;
     }
 
     /* Grid container using grid-template-areas */
     .grid-container {
       display: grid;
-      /* Define the grid areas */
+      /* 3 rows: header, main area, footer */
       grid-template-areas:
         "header header"
         "sidebar content"
         "footer footer";
-      /* 2 columns: sidebar has a fixed width, content takes remaining space */
+      /* 2 columns: 200px for sidebar, remaining space for content */
       grid-template-columns: 200px 1fr;
-      /* 3 rows: header, main area, footer */
-      grid-template-rows: 100px auto 80px;
-      gap: 10px; /* optional spacing between cells */
-      padding: 10px; /* optional padding around the grid */
+      /* Fixed height for header/footer or let them auto-size */
+      grid-template-rows: 80px auto 80px;
+      gap: 10px; /* Optional spacing between cells */
+      padding: 10px;
+      min-height: 100vh; /* Fill the viewport vertically */
     }
 
-    /* Header spans full width in row 1 */
+    /* Header spans full width (row 1, columns 1–2) */
     .header {
       grid-area: header;
-      background-color: #ffff00; /* Yellow */
+      background-color: #ffeb3b; /* Yellow */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -42,39 +42,37 @@
       font-weight: bold;
     }
 
-    /* Sidebar on the left in row 2, column 1 */
+    /* Sidebar on the left (row 2, column 1) */
     .sidebar {
       grid-area: sidebar;
-      background-color: #cc9933; /* Brownish color */
+      background-color: #cc9933; /* Orange/brown */
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
       color: #fff;
       font-weight: bold;
     }
 
-    /* Main content on the right in row 2, column 2 */
+    /* Main content on the right (row 2, column 2) */
     .content {
       grid-area: content;
-      background-color: #ff99aa; /* Pinkish color */
+      background-color: #f48fb1; /* Pink */
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
       color: #fff;
       font-weight: bold;
     }
 
-    /* Footer spans full width in row 3 */
+    /* Footer spans full width (row 3, columns 1–2) */
     .footer {
       grid-area: footer;
-      background-color: #996633; /* Darker brown */
+      background-color: #795548; /* Brown */
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 20px;
-      color: #fff;
       font-weight: bold;
     }
   </style>
