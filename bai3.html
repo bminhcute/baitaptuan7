@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Logo - Banner - Head-Link - Left - Content - Right - Footer</title>
+  <meta charset="UTF-8">
+  <title>Logo - Banner - Head-link - Left - Content - Right - Footer</title>
   <style>
-    /* Reset and base styles */
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -14,19 +14,23 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Top sections */
+    /* logo (top row) */
     .logo {
       background-color: #00ffff; /* Bright cyan */
       text-align: center;
       padding: 20px;
       font-weight: bold;
     }
+
+    /* banner (below logo) */
     .banner {
-      background-color: #00ffff; /* Same bright cyan (adjust if needed) */
+      background-color: #00ffff; /* Same bright cyan */
       text-align: center;
       padding: 20px;
       font-weight: bold;
     }
+
+    /* head-link (purple bar) */
     .head-link {
       background-color: #800080; /* Purple */
       color: #fff;
@@ -35,23 +39,29 @@
       font-weight: bold;
     }
 
-    /* Container for the three middle columns */
+    /* Container for left - content - right */
     .middle-container {
       display: flex;
       min-height: 300px; /* Adjust as needed */
     }
+
+    /* left column (cream) */
     .left {
       background-color: #fff8dc; /* Cream color */
       flex: 1;
       text-align: center;
       padding: 20px;
     }
+
+    /* main content (white) */
     .content {
-      background-color: #f2f2f2; /* Light gray or white */
+      background-color: #f2f2f2; /* Light gray/white */
       flex: 2;
       text-align: center;
       padding: 20px;
     }
+
+    /* right column (cream) */
     .right {
       background-color: #fff8dc; /* Same cream color */
       flex: 1;
@@ -59,7 +69,7 @@
       padding: 20px;
     }
 
-    /* Footer */
+    /* footer (dark red) */
     .footer {
       background-color: #990000; /* Dark red */
       color: #fff;
