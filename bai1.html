@@ -2,14 +2,56 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bài 1 - Chania Layout</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-  </style>
-</head>
-<body>
-  <h1>Bài 1</h1>
-  <p>Nội dung: (Chưa có nội dung)</p>
-</body>
-</html>
+    /* Đặt box-sizing cho tất cả phần tử */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    /* Header */
+    .header {
+      padding: 80px;
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+    }
+    .header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .header p {
+      font-size: 18px;
+    }
+    /* Row chứa cột bên trái và nội dung chính */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    /* Cột bên trái */
+    .side {
+      flex: 30%;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    .side h2, .side h3, .side h5 {
+      margin-top: 0;
+    }
+    .side img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .side a {
+      color: #1abc9c;
+      text-decoration: none;
+    }
+    .side a:hover {
+      text-decoration: underline;
+    }
+    /* Nội dung chính */
+    .main {
+      flex: 70%;
