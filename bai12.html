@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Product Grid</title>
+  <title>Responsive Layout with 4-2-1 Items</title>
   <style>
     /* Base reset */
     * {
@@ -11,10 +11,10 @@
       box-sizing: border-box;
     }
 
-    /* Default font size for large screens (laptop) */
+    /* Default font size for large screens */
     body {
       font-family: Arial, sans-serif;
-      font-size: 18px; /* Largest font on wide screens */
+      font-size: 18px; /* Largest font on wide screens (laptop) */
       background-color: #f4f4f4;
     }
 
@@ -24,14 +24,22 @@
       padding: 1rem;
     }
 
-    .product-grid {
+    /* Title */
+    h1 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    /* Grid container for the items */
+    .item-grid {
       display: grid;
       gap: 1rem;
-      /* By default (laptop/large screens), show 4 items per row */
+      /* By default (laptop), show 4 items per row */
       grid-template-columns: repeat(4, 1fr);
     }
 
-    .product-card {
+    /* Each item card */
+    .item-card {
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 4px;
@@ -40,14 +48,13 @@
       flex-direction: column;
     }
 
-    .product-image {
+    .item-card img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: auto;
       display: block;
     }
 
-    .product-info {
+    .card-body {
       padding: 0.75rem;
       flex: 1;
       display: flex;
@@ -55,26 +62,24 @@
       justify-content: space-between;
     }
 
-    .product-info h3 {
+    .card-body h3 {
       margin-bottom: 0.5rem;
       font-size: 1.1rem;
+      color: #333;
     }
 
-    .product-info p {
+    .card-body p {
       flex: 1;
       margin-bottom: 0.5rem;
       line-height: 1.4;
     }
 
-    .product-footer {
+    .card-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 0.5rem;
-    }
-
-    .price {
-      font-weight: bold;
+      padding: 0.75rem;
+      border-top: 1px solid #ddd;
     }
 
     .like-btn {
@@ -88,13 +93,16 @@
     .like-btn:hover {
       background-color: #c2185b;
     }
+    .price {
+      font-weight: bold;
+    }
 
     /* Tablet screens: 2 items per row, font-size = 16px */
     @media (max-width: 991px) and (min-width: 600px) {
       body {
         font-size: 16px; /* Medium font for tablets */
       }
-      .product-grid {
+      .item-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -104,7 +112,7 @@
       body {
         font-size: 14px; /* Smallest font for mobile */
       }
-      .product-grid {
+      .item-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -113,45 +121,67 @@
 <body>
 
   <div class="container">
-    <h1 style="margin-bottom: 1rem;">Responsive Product Grid</h1>
+    <h1>Responsive 4-2-1 Layout</h1>
 
-    <div class="product-grid">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <img
-          src="https://via.placeholder.com/300x200.png?text=Flower+1"
-          alt="Flower 1"
-          class="product-image"
-        />
-        <div class="product-info">
+    <div class="item-grid">
+      <!-- Item 1 -->
+      <div class="item-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Flower+1" alt="Flower 1">
+        <div class="card-body">
           <h3>Pink Flower</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Repellendus officiis maiores consequatur quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Repellendus officiis maiores consequatur quam.
           </p>
-          <div class="product-footer">
-            <button class="like-btn">Like</button>
-            <div class="price">$47.99</div>
-          </div>
+        </div>
+        <div class="card-footer">
+          <button class="like-btn">Like</button>
+          <div class="price">$47.99</div>
         </div>
       </div>
-
-      <!-- Product 2 -->
-      <div class="product-card">
-        <img
-          src="https://via.placeholder.com/300x200.png?text=Flower+2"
-          alt="Flower 2"
-          class="product-image"
-        />
-        <div class="product-info">
+      <!-- Item 2 -->
+      <div class="item-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Flower+2" alt="Flower 2">
+        <div class="card-body">
           <h3>Pink Flower</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Repellendus officiis maiores consequatur quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Repellendus officiis maiores consequatur quam.
           </p>
-          <div class="product-footer">
-            <button class="like-btn">Like</button>
-            <div class="price">$47.99</div>
-          </div>
         </div>
-      </
+        <div class="card-footer">
+          <button class="like-btn">Like</button>
+          <div class="price">$47.99</div>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="item-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Flower+3" alt="Flower 3">
+        <div class="card-body">
+          <h3>Pink Flower</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Repellendus officiis maiores consequatur quam.
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="like-btn">Like</button>
+          <div class="price">$47.99</div>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="item-card">
+        <img src="https://via.placeholder.com/300x200.png?text=Flower+4" alt="Flower 4">
+        <div class="card-body">
+          <h3>Pink Flower</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Repellendus officiis maiores consequatur quam.
+          </p>
+        </div>
+        <div class="card-footer">
+          <button class="like-btn">Like</button>
+          <div class="price">$47.99</div>
+        </div>
+      </div>
+    </div><!-- /item-grid -->
+  </div><!-- /container -->
+
+</body>
+</html>
