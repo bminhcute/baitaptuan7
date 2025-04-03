@@ -1,24 +1,126 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài 14</title>
+  <title>Responsive Layout with Image & Font Size</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Default font size = 16px */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .container {
+      display: flex;
+      min-height: 400px; /* Just for demo */
+    }
+
+    aside {
+      flex: 1;
+      padding: 1rem;
+    }
+
+    .aside1 {
+      background-color: #ffca28; /* Yellowish */
+    }
+    .aside2 {
+      background-color: #ec407a; /* Pinkish */
+    }
+
+    main {
+      flex: 2;
+      background-color: #29b6f6; /* Light blue */
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    main p {
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Responsive image: width=100%, height auto */
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #fff;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Media query for 1-column layout & bigger font */
+    @media (max-width: 600px) {
+      body {
+        font-size: 20px; /* Increase font size on small screens */
+      }
+      .container {
+        flex-direction: column;
+      }
+      aside, main {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Bài 14</h1>
-  <p><strong>Yêu cầu:</strong></p>
-  <ul>
-    <li>Tạo bố cục như sau.</li>
-    <li>Thực hiện CSS thay đổi kích thước font chữ và hình ảnh khi chuyển thành 1 cột:
-      <ul>
-        <li>Responsive font size: font-size của body là 16px, khi responsive 1 cột thì font là 20px.</li>
-        <li>Responsive image: hình ảnh sẽ được thay đổi cùng tỉ lệ.</li>
-      </ul>
-    </li>
-  </ul>
+
+  <header>
+    <h1>Header</h1>
+  </header>
+
+  <div class="container">
+    <aside class="aside1">
+      <h2>Aside 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Repellendus, cumque!
+      </p>
+    </aside>
+
+    <main>
+      <h2>Main Content</h2>
+      <img src="https://via.placeholder.com/600x300?text=Sample+Image" alt="Sample">
+      <p>
+        “Flexbox Layout (Flexible Box) is a layout model in CSS that allows 
+        items in a container to be aligned and distributed in space more efficiently. 
+        It helps create flexible and responsive layouts easily.”
+      </p>
+    </main>
+
+    <aside class="aside2">
+      <h2>Aside 2</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Repellendus, cumque!
+      </p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>Footer</p>
+  </footer>
+
 </body>
 </html>
