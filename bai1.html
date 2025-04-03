@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bài 1 - Chania Layout</title>
-  <style>
-    /* Đặt box-sizing cho tất cả phần tử */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    /* Header */
-    .header {
-      padding: 80px;
-      text-align: center;
-      background: #1abc9c;
-      color: white;
-    }
-    .header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-    .header p {
-      font-size: 18px;
-    }
-    /* Row chứa cột bên trái và nội dung chính */
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    /* Cột bên trái */
-    .side {
-      flex: 30%;
-      background-color: #f1f1f1;
-      padding: 20px;
-    }
-    .side h2, .side h3, .side h5 {
-      margin-top: 0;
-    }
-    .side img {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    .side a {
-      color: #1abc9c;
-      text-decoration: none;
-    }
-    .side a:hover {
-      text-decoration: underline;
-    }
-    /* Nội dung chính */
-    .main {
-      flex: 70%;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header, .footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            background-color: lightblue;
+            width: 200px;
+            padding: 10px;
+        }
+        .sidebar a {
+            display: block;
+            background-color: #008CBA;
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            text-decoration: none;
+            text-align: center;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Chania</div>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="#">The Flight</a>
+            <a href="#">The City</a>
+            <a href="#">The Island</a>
+            <a href="#">The Food</a>
+        </div>
+        <div class="content">
+            <h2>The City</h2>
+            <p>Chania is the capital of the Chania region on the island of Crete...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+    </div>
+
+    <div class="footer">Footer Text</div>
+
+</body>
+</html>
