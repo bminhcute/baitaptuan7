@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Chania Layout</title>
   <style>
-    /* Reset */
+    /* Reset mặc định */
     * {
       margin: 0;
       padding: 0;
@@ -15,9 +15,9 @@
       background-color: #fff;
     }
 
-    /* Top navigation bar */
+    /* Thanh điều hướng trên cùng (navbar) */
     .topnav {
-      background-color: #ff9999; /* Pink background */
+      background-color: #ff9999; /* Màu hồng */
       padding: 10px 0;
       text-align: center;
     }
@@ -30,29 +30,25 @@
       padding: 8px;
     }
     .topnav a:hover {
-      background-color: #ffc0cb; /* Lighter pink on hover */
+      background-color: #ffc0cb; /* Hồng nhạt hơn khi hover */
       border-radius: 4px;
     }
 
-    /* Container for the sidebar + main content */
+    /* Khối chứa sidebar + nội dung */
     .container {
       display: flex;
-      min-height: 70vh; /* Adjust as needed */
+      min-height: 70vh; /* chiều cao tối thiểu, có thể chỉnh */
     }
 
-    /* Sidebar (left menu) */
+    /* Sidebar bên trái */
     .sidebar {
       width: 200px;
       background-color: #f8f8f8;
       padding: 10px;
     }
-    .sidebar h3 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
     .vertical-menu a {
       display: block;
-      background-color: #3399ff;
+      background-color: #3399ff; /* Xanh cho menu item */
       color: #fff;
       text-decoration: none;
       padding: 10px;
@@ -62,10 +58,10 @@
       border-radius: 4px;
     }
     .vertical-menu a:hover {
-      background-color: #007acc; /* Darker blue on hover */
+      background-color: #007acc; /* Xanh đậm hơn khi hover */
     }
 
-    /* Main content area */
+    /* Nội dung chính bên phải */
     .content {
       flex: 1;
       padding: 20px;
@@ -87,9 +83,9 @@
       line-height: 1.5;
     }
 
-    /* Footer */
+    /* Footer màu xanh nhạt */
     .footer {
-      background-color: #99ccff; /* Light blue */
+      background-color: #99ccff; 
       color: #000;
       text-align: center;
       padding: 10px;
@@ -100,7 +96,7 @@
 </head>
 <body>
 
-  <!-- Top Navigation -->
+  <!-- Thanh điều hướng trên cùng -->
   <div class="topnav">
     <a href="#">Home</a>
     <a href="#">News</a>
@@ -108,9 +104,9 @@
     <a href="#">About</a>
   </div>
 
-  <!-- Main container -->
+  <!-- Khối chính: Sidebar + Nội dung -->
   <div class="container">
-    <!-- Sidebar -->
+    <!-- Sidebar bên trái -->
     <div class="sidebar">
       <div class="vertical-menu">
         <a href="#">The Flight</a>
@@ -123,7 +119,7 @@
       </div>
     </div>
 
-    <!-- Content -->
+    <!-- Nội dung bên phải -->
     <div class="content">
       <div class="titlebox">The City</div>
       <h2>Chania</h2>
