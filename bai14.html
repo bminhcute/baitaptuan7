@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Layout with Image & Font Size</title>
+  <title>Responsive Font & Image</title>
   <style>
-    /* Reset and base styles */
+    /* Reset defaults */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
-    /* Default font size = 16px */
+    /* Base body styling */
     body {
       font-family: Arial, sans-serif;
-      font-size: 16px;
+      font-size: 16px; /* Default font size */
     }
 
     header, footer {
@@ -24,42 +23,46 @@
       padding: 1rem;
     }
 
+    /* Container for aside1, main, aside2 */
     .container {
       display: flex;
-      min-height: 400px; /* Just for demo */
+      min-height: 300px; /* For demo */
     }
 
-    aside {
-      flex: 1;
-      padding: 1rem;
-    }
-
+    /* Aside 1 (left) */
     .aside1 {
-      background-color: #ffca28; /* Yellowish */
-    }
-    .aside2 {
-      background-color: #ec407a; /* Pinkish */
+      flex: 1;
+      background-color: #ffca28; /* Yellow */
+      padding: 1rem;
+      color: #000;
+      text-align: center;
     }
 
-    main {
+    /* Main content (middle) */
+    .main {
       flex: 2;
       background-color: #29b6f6; /* Light blue */
       padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      color: #000;
+      text-align: center;
     }
 
-    main p {
-      margin-top: 1rem;
-      line-height: 1.4;
+    /* Aside 2 (right) */
+    .aside2 {
+      flex: 1;
+      background-color: #ec407a; /* Pinkish */
+      padding: 1rem;
+      color: #000;
+      text-align: center;
     }
 
-    /* Responsive image: width=100%, height auto */
+    /* Image styling: responsive by default */
     img {
       max-width: 100%;
       height: auto;
-      border: 2px solid #fff;
+      display: block;
+      margin: 1rem auto; /* Center the image */
+      border: 2px solid #fff; /* Just for demo contrast */
       border-radius: 4px;
     }
 
@@ -70,15 +73,15 @@
       text-align: center;
     }
 
-    /* Media query for 1-column layout & bigger font */
+    /* Media query for max-width:600px => 1 column, font-size=20px */
     @media (max-width: 600px) {
       body {
-        font-size: 20px; /* Increase font size on small screens */
+        font-size: 20px; /* Increase font size on smaller screens */
       }
       .container {
         flex-direction: column;
       }
-      aside, main {
+      .aside1, .main, .aside2 {
         flex: 1 1 100%;
       }
     }
@@ -93,28 +96,23 @@
   <div class="container">
     <aside class="aside1">
       <h2>Aside 1</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Repellendus, cumque!
-      </p>
+      <p>Some text for aside 1.</p>
     </aside>
 
-    <main>
+    <main class="main">
       <h2>Main Content</h2>
       <img src="https://via.placeholder.com/600x300?text=Sample+Image" alt="Sample">
       <p>
-        “Flexbox Layout (Flexible Box) is a layout model in CSS that allows 
-        items in a container to be aligned and distributed in space more efficiently. 
-        It helps create flexible and responsive layouts easily.”
+        “Flexbox Layout (Flexible Box) is a layout model in CSS that allows items in a container 
+        to be aligned and distributed in space more efficiently. 
+        When resizing the screen below 600px, this layout becomes one column, 
+        the font size increases to 20px, and the image remains responsive.”
       </p>
     </main>
 
     <aside class="aside2">
       <h2>Aside 2</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Repellendus, cumque!
-      </p>
+      <p>Some text for aside 2.</p>
     </aside>
   </div>
 
