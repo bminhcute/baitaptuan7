@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài 4: Tạo bố cục dùng lưới</title>
+  <title>Grid Layout Example</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
+    .grid-container {
+      display: grid;
+      grid-template-rows: 100px auto 50px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+    .grid-container > div {
+      background-color: #2ecc71;
+      color: white;
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
-  <h1>Bài 4: Tạo bố cục dùng lưới</h1>
-  <p><strong>Yêu cầu:</strong></p>
-  <ul>
-    <li>Tạo 3 hàng và 3 cột.</li>
-    <li>
-      Kích thước:
-      <ul>
-        <li>Hàng đầu tiên cao 100px.</li>
-        <li>Hàng thứ hai tự động theo nội dung.</li>
-        <li>Hàng cuối cùng cao 50px.</li>
-      </ul>
-    </li>
-    <li>Mỗi cột rộng bằng nhau.</li>
-  </ul>
+  <div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5 (auto height)</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </div>
 </body>
 </html>
