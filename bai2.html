@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chania Layout</title>
   <style>
-    /* Reset & Base Styles */
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -16,9 +15,9 @@
       background-color: #fff;
     }
 
-    /* Top Navigation */
+    /* Top navigation bar */
     .topnav {
-      background-color: #ff9999; /* Pink background for the top nav */
+      background-color: #ff9999; /* Pink background */
       padding: 10px 0;
       text-align: center;
     }
@@ -32,41 +31,45 @@
     }
     .topnav a:hover {
       background-color: #ffc0cb; /* Lighter pink on hover */
+      border-radius: 4px;
     }
 
-    /* Container for Sidebar + Main Content */
+    /* Container for the sidebar + main content */
     .container {
       display: flex;
-      min-height: 80vh; /* Just to ensure some space; adjust as needed */
+      min-height: 70vh; /* Adjust as needed */
     }
 
-    /* Sidebar (Left Menu) */
+    /* Sidebar (left menu) */
     .sidebar {
       width: 200px;
       background-color: #f8f8f8;
       padding: 10px;
     }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
     .vertical-menu a {
       display: block;
-      background-color: #3399ff; /* Blue background for menu items */
+      background-color: #3399ff;
       color: #fff;
       text-decoration: none;
       padding: 10px;
       margin-bottom: 5px;
       text-align: center;
       font-weight: bold;
+      border-radius: 4px;
     }
     .vertical-menu a:hover {
       background-color: #007acc; /* Darker blue on hover */
     }
 
-    /* Main Content */
+    /* Main content area */
     .content {
       flex: 1;
       padding: 20px;
-      background-color: #fff;
     }
-    /* Large Blue Box for "The City" */
     .titlebox {
       background-color: #3399ff;
       color: #fff;
@@ -74,21 +77,30 @@
       font-size: 24px;
       padding: 20px;
       margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    .content h2 {
+      margin-bottom: 10px;
+    }
+    .content p {
+      margin-bottom: 10px;
+      line-height: 1.5;
     }
 
     /* Footer */
     .footer {
-      background-color: #99ccff; /* Light blue footer */
+      background-color: #99ccff; /* Light blue */
       color: #000;
       text-align: center;
       padding: 10px;
       font-weight: bold;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
+  <!-- Top Navigation -->
   <div class="topnav">
     <a href="#">Home</a>
     <a href="#">News</a>
@@ -96,9 +108,9 @@
     <a href="#">About</a>
   </div>
 
-  <!-- Main Container (Sidebar + Content) -->
+  <!-- Main container -->
   <div class="container">
-    <!-- Sidebar (Left Menu) -->
+    <!-- Sidebar -->
     <div class="sidebar">
       <div class="vertical-menu">
         <a href="#">The Flight</a>
@@ -111,7 +123,7 @@
       </div>
     </div>
 
-    <!-- Main Content Area -->
+    <!-- Content -->
     <div class="content">
       <div class="titlebox">The City</div>
       <h2>Chania</h2>
