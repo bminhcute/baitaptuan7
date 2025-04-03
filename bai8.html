@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Header - Sidebar - Main - Aside - Footer</title>
+  <title>Blog Layout with Grid</title>
   <style>
     /* Reset default browser styles */
     * {
@@ -12,19 +12,101 @@
     }
     body {
       font-family: Arial, sans-serif;
-      background-color: #fff;
     }
 
-    /* Grid container with 3 rows and 3 columns */
+    /* Grid container with 3 rows: header, main row, footer */
     .grid-container {
       display: grid;
-      /* Three rows: header, main area, footer */
-      grid-template-rows: auto auto auto;
-      /* Three columns with a 1:2:1 ratio */
+      /* 3 columns with ratio 1:2:1 => sidebar : main : aside */
       grid-template-columns: 1fr 2fr 1fr;
-      /* Define grid areas by name */
+      /* 3 rows: header, main area, footer */
+      grid-template-rows: auto auto auto;
+      /* Define named areas */
       grid-template-areas:
         "header header header"
         "sidebar main aside"
         "footer footer footer";
-      gap: 10px
+      gap: 10px; /* Optional spacing between cells */
+      min-height: 100vh; /* Fill viewport vertically if desired */
+      padding: 10px;
+    }
+
+    /* Header (top, spanning all columns) */
+    .header {
+      grid-area: header;
+      background-color: #888; /* Gray */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    /* Sidebar (left column) */
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #cc9933; /* Orange/brown */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    /* Main content (center column, 2/3 width) */
+    .main {
+      grid-area: main;
+      background-color: #ff99aa; /* Pink */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Aside (right column) */
+    .aside {
+      grid-area: aside;
+      background-color: #cc9933; /* Same as sidebar */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    /* Footer (bottom, spanning all columns) */
+    .footer {
+      grid-area: footer;
+      background-color: #996633; /* Darker brown */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <header class="header">Header</header>
+    <aside class="sidebar">Sidebar</aside>
+    <main class="main">Main Content</main>
+    <div class="aside">Aside</div>
+    <footer class="footer">Footer</footer>
+  </div>
+
+</body>
+</html>
