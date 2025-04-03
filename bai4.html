@@ -2,44 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Grid Layout Example</title>
+  <title>3x3 Grid Layout</title>
   <style>
-    /* To fill the screen height and have a uniform green background */
-    html, body {
+    /* Reset */
+    * {
       margin: 0;
       padding: 0;
-      height: 100%;
+      box-sizing: border-box;
     }
     body {
+      font-family: Arial, sans-serif;
       background-color: #2ecc71; /* Green background */
       color: #fff;              /* White text */
-      font-family: Arial, sans-serif;
+      min-height: 100vh;        /* Fill viewport height if desired */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Grid container with 3 rows & 3 columns */
+    /* Container for the 3x3 grid */
     .grid-container {
       display: grid;
+      /* 3 rows: 100px, auto, 50px */
       grid-template-rows: 100px auto 50px;
+      /* 3 columns of equal width */
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      /* Add some padding if desired */
+      gap: 10px; /* optional space between cells */
       padding: 10px;
-      /* Stretch to full available height */
-      min-height: 100%;
+      width: 80%; /* optional, adjust to your needs */
+      max-width: 1000px; /* optional max width */
     }
 
-    /* Common styling for each grid item */
+    /* Common styling for each grid cell */
     .grid-container > div {
-      border: 1px solid #fff;
+      border: 2px solid #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 10px;
-      font-size: 16px;
       text-align: center;
+      font-size: 16px;
     }
 
-    /* Center cell (row 2, col 2) with the longer text */
+    /* Center cell with longer text */
     .item5 {
       text-align: justify;
       line-height: 1.5;
@@ -54,12 +59,12 @@
     <div>3</div>
     <div>4</div>
     <div class="item5">
-      5. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Vel voluptatum nam nobis quidem, delectus impedit et consequatur 
-      quibusdam re quam quae id quo amet enim, fugit quam aliquam quas soluta. 
-      Eius, labore! Fugiat nisi, voluptates nulla cupiditate nam similique? 
-      Quasi, tenetur laboriosam doloribus facilis sunt quia quas. 
-      Praesentium neque iure cumque et animi! Suscipit nesciunt incidunt 
+      5. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Vel voluptatum nam nobis quidem, delectus impedit et consequatur
+      quibusdam re quam quae id quo amet enim, fugit quam aliquam quas soluta.
+      Eius, labore! Fugiat nisi, voluptates nulla cupiditate nam similique?
+      Quasi, tenetur laboriosam doloribus facilis sunt quia quas.
+      Praesentium neque iure cumque et animi! Suscipit nesciunt incidunt
       eveniet perspiciatis. Tenetur.
     </div>
     <div>6</div>
