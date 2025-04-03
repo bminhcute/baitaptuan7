@@ -1,20 +1,121 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài 6: Định vị phần tử bằng grid-column và grid-row</title>
+  <title>Grid Layout - Hero & Services</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
+    /* Reset default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    /* The grid container */
+    .grid-container {
+      display: grid;
+      /* Four rows: header, hero, services row, footer */
+      grid-template-rows: 80px 120px auto 80px;
+      /* Three columns for the services row */
+      grid-template-columns: repeat(3, 1fr);
+      /* Add a small gap around cells if you like */
+      gap: 10px;
+      /* Some padding around the grid */
+      padding: 10px;
+    }
+
+    /* Header: spans all 3 columns in row 1 */
+    .header {
+      grid-column: 1 / 4; /* from column 1 to 3 (inclusive) */
+      grid-row: 1;        /* row 1 */
+      background-color: #888;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Hero: spans all 3 columns in row 2 */
+    .hero {
+      grid-column: 1 / 4; /* from column 1 to 3 */
+      grid-row: 2;        /* row 2 */
+      background-color: #ff99aa; /* pink */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Service 1: occupies row 3, column 1 */
+    .service1 {
+      grid-column: 1; /* single column */
+      grid-row: 3;
+      background-color: #cc9933; /* orange/brown */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Service 2: occupies row 3, column 2 */
+    .service2 {
+      grid-column: 2;
+      grid-row: 3;
+      background-color: #cc9933;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Service 3: occupies row 3, column 3 */
+    .service3 {
+      grid-column: 3;
+      grid-row: 3;
+      background-color: #cc9933;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Footer: spans all 3 columns in row 4 */
+    .footer {
+      grid-column: 1 / 4;
+      grid-row: 4;
+      background-color: #990000; /* dark red */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <h1>Bài 6: Định vị phần tử bằng grid-column và grid-row</h1>
-  <p><strong>Yêu cầu:</strong></p>
-  <ul>
-    <li>Tạo bố cục 3x3.</li>
-    <li>Phần tử số 1 chiếm toàn bộ hàng đầu tiên.</li>
-    <li>Phần tử số 5 mở rộng từ cột 2 đến 3 ở hàng thứ hai.</li>
-  </ul>
+
+  <div class="grid-container">
+    <div class="header">Header</div>
+    <div class="hero">Hero</div>
+    <div class="service1">Service 1</div>
+    <div class="service2">Service 2</div>
+    <div class="service3">Service 3</div>
+    <div class="footer">Footer</div>
+  </div>
+
 </body>
 </html>
