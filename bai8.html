@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài 8: Thiết kế Layout kiểu Blog</title>
+  <title>Header - Sidebar - Main - Aside - Footer</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-  </style>
-</head>
-<body>
-  <h1>Bài 8: Thiết kế Layout kiểu Blog</h1>
-  <p><strong>Yêu cầu:</strong></p>
-  <ul>
-    <li>Tạo bố cục với:
-      <ul>
-        <li>Header (trên cùng, rộng 100%).</li>
-        <li>Sidebar (bên trái).</li>
-        <li>Main Content (chiếm 2/3 không gian).</li>
-        <li>Aside (bên phải).</li>
-        <li>Footer (dưới cùng).</li>
-      </ul>
-    </li>
-  </ul>
-</body>
-</html>
+    /* Reset default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    /* Grid container with 3 rows and 3 columns */
+    .grid-container {
+      display: grid;
+      /* Three rows: header, main area, footer */
+      grid-template-rows: auto auto auto;
+      /* Three columns with a 1:2:1 ratio */
+      grid-template-columns: 1fr 2fr 1fr;
+      /* Define grid areas by name */
+      grid-template-areas:
+        "header header header"
+        "sidebar main aside"
+        "footer footer footer";
+      gap: 10px
