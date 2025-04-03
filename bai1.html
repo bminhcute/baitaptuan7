@@ -1,65 +1,100 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 1 - Layout</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .header, .footer {
-            background-color: blue;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .container {
-            display: flex;
-        }
-        .sidebar {
-            background-color: lightblue;
-            width: 200px;
-            padding: 10px;
-        }
-        .sidebar a {
-            display: block;
-            background-color: #008CBA;
-            color: white;
-            padding: 10px;
-            margin: 5px 0;
-            text-decoration: none;
-            text-align: center;
-        }
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Chania Layout</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .header {
+      background-color: #2196F3; /* Blue */
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 40px;
+    }
+
+    /* Left sidebar */
+    .sidebar {
+      float: left;
+      width: 25%; /* 1/4 of the screen for sidebar */
+      background-color: #0b7dda; /* Darker blue */
+      height: calc(100vh - 120px); /* Just for demo; adjust as needed */
+      color: white;
+      padding: 20px;
+    }
+    .sidebar a {
+      display: block;
+      background-color: #2196F3;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .sidebar a:hover {
+      background-color: #1976D2;
+    }
+
+    /* Main content */
+    .main {
+      float: left;
+      width: 75%; /* 3/4 of the screen */
+      padding: 20px;
+      background-color: #f9f9f9;
+      min-height: calc(100vh - 120px); /* Just for demo; adjust as needed */
+    }
+    .main h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .main p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+      clear: both; /* Ensure footer is below floated elements */
+      background-color: #2196F3;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="header">Chania</div>
+  <div class="header">
+    Chania
+  </div>
 
-    <div class="container">
-        <div class="sidebar">
-            <a href="#">The Flight</a>
-            <a href="#">The City</a>
-            <a href="#">The Island</a>
-            <a href="#">The Food</a>
-        </div>
-        <div class="content">
-            <h2>The City</h2>
-            <p>Chania is the capital of the Chania region on the island of Crete...</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        </div>
-    </div>
+  <div class="sidebar">
+    <a href="#">The Flight</a>
+    <a href="#">The City</a>
+    <a href="#">The Island</a>
+    <a href="#">The Food</a>
+  </div>
 
-    <div class="footer">Footer Text</div>
-
-</body>
-</html>
+  <div class="main">
+    <h2>The City</h2>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+      exercitation ullamco laboris nisi ut aliqu
