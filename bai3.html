@@ -1,15 +1,108 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài 3</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout Example</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Logo (top) */
+    .logo {
+      background-color: #00ffff; /* Bright cyan */
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Banner (below logo) */
+    .banner {
+      background-color: #00ffff; /* Same bright cyan (adjust if you want a different shade) */
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Head-link (purple bar) */
+    .head-link {
+      background-color: #800080; /* Purple */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Container for left - content - right */
+    .container {
+      display: flex;
+    }
+
+    /* Left column */
+    .left {
+      background-color: #fff8dc; /* Light yellow (cornsilk) */
+      width: 150px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Main content area */
+    .content {
+      flex: 1;
+      background-color: #f2f2f2; /* Light gray */
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Right column */
+    .right {
+      background-color: #fff8dc; /* Same as left column */
+      width: 150px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Footer (bottom) */
+    .footer {
+      background-color: #990000; /* Dark red */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
-  <h1>Bài 3</h1>
-  <p>Nội dung: (Chưa có nội dung)</p>
+
+  <!-- Logo -->
+  <div class="logo">
+    logo
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    banner
+  </div>
+
+  <!-- Head-link -->
+  <div class="head-link">
+    head-link
+  </div>
+
+  <!-- Main container (3 columns) -->
+  <div class="container">
+    <div class="left">left</div>
+    <div class="content">content</div>
+    <div class="right">right</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    footer
+  </div>
+
 </body>
 </html>
