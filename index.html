@@ -5,30 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Bài Tập Layout</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset và style chung */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
       background-color: #f9f9f9;
       line-height: 1.6;
     }
-    header {
+    header, footer {
       background-color: #333;
       color: #fff;
-      padding: 10px 20px;
       text-align: center;
+      padding: 20px;
     }
     nav {
       background-color: #444;
-      padding: 10px 20px;
+      padding: 10px;
     }
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin: 0;
+      padding: 0;
     }
     nav ul li {
       margin: 5px 10px;
@@ -42,9 +46,9 @@
       text-decoration: underline;
     }
     section {
-      padding: 20px;
-      margin: 20px;
       background-color: #fff;
+      margin: 20px;
+      padding: 20px;
       border: 1px solid #ddd;
       border-radius: 4px;
     }
@@ -52,12 +56,11 @@
       margin-top: 0;
       color: #333;
     }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-      margin-top: 40px;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px 0;
     }
   </style>
 </head>
@@ -83,188 +86,168 @@
       <li><a href="#bai12">Bài 12</a></li>
       <li><a href="#bai13">Bài 13</a></li>
       <li><a href="#bai14">Bài 14</a></li>
-      <li><a href="#bai15">Bài 15</a></li>
-      <li><a href="#bai16">Bài 16</a></li>
     </ul>
   </nav>
 
-  <!-- Bài 1 -->
+  <!-- Bài 1: Chưa có nội dung (Up khung giao diện 1) -->
   <section id="bai1">
     <h2>Bài 1</h2>
-    <p>Nội dung: (Chưa có nội dung)</p>
+    <p>(Chưa có nội dung cụ thể – hiển thị khung giao diện)</p>
+    <img src="https://via.placeholder.com/800x200?text=Khung+Trang+Web+1" alt="Khung Trang Web 1">
   </section>
 
-  <!-- Bài 2 -->
+  <!-- Bài 2: Chưa có nội dung (Up khung giao diện 2) -->
   <section id="bai2">
     <h2>Bài 2</h2>
-    <p>Nội dung: (Chưa có nội dung)</p>
+    <p>(Chưa có nội dung cụ thể – hiển thị khung giao diện)</p>
+    <img src="https://via.placeholder.com/800x200?text=Khung+Trang+Web+2" alt="Khung Trang Web 2">
   </section>
 
-  <!-- Bài 3 -->
+  <!-- Bài 3: Chưa có nội dung (Up khung giao diện 3) -->
   <section id="bai3">
     <h2>Bài 3</h2>
-    <p>Nội dung: (Chưa có nội dung)</p>
+    <p>(Chưa có nội dung cụ thể – hiển thị khung giao diện)</p>
+    <img src="https://via.placeholder.com/800x200?text=Khung+Trang+Web+3" alt="Khung Trang Web 3">
   </section>
 
-  <!-- Bài 4 -->
+  <!-- Bài 4: Tạo bố cục dùng lưới -->
   <section id="bai4">
     <h2>Bài 4: Tạo bố cục dùng lưới</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Tạo 3 hàng và 3 cột.</li>
-      <li>
-        Kích thước:
-        <ul>
-          <li>Hàng đầu tiên cao 100px.</li>
-          <li>Hàng thứ hai tự động theo nội dung.</li>
-          <li>Hàng cuối cùng cao 50px.</li>
-        </ul>
-      </li>
-      <li>Mỗi cột rộng bằng nhau.</li>
-    </ul>
+    <div style="display:grid; grid-template-rows:100px auto 50px; grid-template-columns:repeat(3,1fr); gap:10px; padding:10px; background-color:#2ecc71; color:#fff;">
+      <div style="display:flex; align-items:center; justify-content:center;">1</div>
+      <div style="display:flex; align-items:center; justify-content:center;">2</div>
+      <div style="display:flex; align-items:center; justify-content:center;">3</div>
+      <div style="display:flex; align-items:center; justify-content:center;">4</div>
+      <div style="display:flex; align-items:center; justify-content:center;">5</div>
+      <div style="display:flex; align-items:center; justify-content:center;">6</div>
+      <div style="display:flex; align-items:center; justify-content:center;">7</div>
+      <div style="display:flex; align-items:center; justify-content:center;">8</div>
+      <div style="display:flex; align-items:center; justify-content:center;">9</div>
+    </div>
   </section>
 
-  <!-- Bài 5 -->
+  <!-- Bài 5: Chỉnh lại bố cục bài 4 -->
   <section id="bai5">
     <h2>Bài 5: Chỉnh lại bố cục bài 4</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Tạo 3 cột với kích thước tỉ lệ 1:2:1.</li>
-      <li>Thêm khoảng cách các hàng là 5px.</li>
-    </ul>
+    <div style="display:grid; grid-template-rows:100px auto 50px; grid-template-columns:1fr 2fr 1fr; row-gap:5px; gap:10px; padding:10px; background-color:#fcf8e3; color:#000;">
+      <div style="display:flex; align-items:center; justify-content:center;">1</div>
+      <div style="display:flex; align-items:center; justify-content:center;">2</div>
+      <div style="display:flex; align-items:center; justify-content:center;">3</div>
+      <div style="display:flex; align-items:center; justify-content:center;">4</div>
+      <div style="display:flex; align-items:center; justify-content:center;">5</div>
+      <div style="display:flex; align-items:center; justify-content:center;">6</div>
+      <div style="display:flex; align-items:center; justify-content:center;">7</div>
+      <div style="display:flex; align-items:center; justify-content:center;">8</div>
+      <div style="display:flex; align-items:center; justify-content:center;">9</div>
+    </div>
   </section>
 
-  <!-- Bài 6 -->
+  <!-- Bài 6: Định vị phần tử bằng grid-column và grid-row -->
   <section id="bai6">
     <h2>Bài 6: Định vị phần tử bằng grid-column và grid-row</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Tạo bố cục 3x3.</li>
-      <li>Phần tử số 1 chiếm toàn bộ hàng đầu tiên.</li>
-      <li>Phần tử số 5 mở rộng từ cột 2 đến 3 ở hàng thứ hai.</li>
-    </ul>
+    <div style="display:grid; grid-template-rows:repeat(3,80px); grid-template-columns:repeat(3,1fr); gap:5px; padding:10px;">
+      <div style="grid-column:1 / -1; grid-row:1; background-color:#dff0d8; color:#3c763d; display:flex; align-items:center; justify-content:center;">1</div>
+      <div style="background-color:#dff0d8; color:#3c763d; display:flex; align-items:center; justify-content:center;">2</div>
+      <div style="background-color:#dff0d8; color:#3c763d; display:flex; align-items:center; justify-content:center;">3</div>
+      <div style="background-color:#dff0d8; color:#3c763d; display:flex; align-items:center; justify-content:center;">4</div>
+      <div style="grid-column:2 / 4; grid-row:2; background-color:#dff0d8; color:#3c763d; display:flex; align-items:center; justify-content:center;">5</div>
+      <div style="background-color:#dff0d8; color:#3c763d; display:flex; align-items:center; justify-content:center;">6</div>
+      <div style="background-color:#dff0d8; color:#3c763d; display:flex; align-items:center; justify-content:center;">7</div>
+      <div style="background-color:#dff0d8; color:#3c763d; display:flex; align-items:center; justify-content:center;">8</div>
+      <div style="background-color:#dff0d8; color:#3c763d; display:flex; align-items:center; justify-content:center;">9</div>
+    </div>
   </section>
 
-  <!-- Bài 7 -->
+  <!-- Bài 7: Tạo layout header - content - footer với grid-template-areas -->
   <section id="bai7">
     <h2>Bài 7: Tạo layout header - content - footer với grid-template-areas</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Tạo layout cơ bản gồm:
-        <ul>
-          <li>Header (rộng 100%).</li>
-          <li>Content (giữa) và Sidebar (bên trái).</li>
-          <li>Footer (rộng 100%).</li>
-        </ul>
-      </li>
-    </ul>
+    <div style="display:grid; grid-template-areas: 'header header' 'sidebar content' 'footer footer'; grid-template-columns:200px 1fr; gap:10px; padding:10px;">
+      <div style="grid-area:header; background-color:#337ab7; padding:10px; color:#fff; text-align:center;">Header</div>
+      <div style="grid-area:sidebar; background-color:#f0ad4e; padding:10px; color:#fff; text-align:center;">Sidebar</div>
+      <div style="grid-area:content; background-color:#5cb85c; padding:10px; color:#fff; text-align:center;">Content</div>
+      <div style="grid-area:footer; background-color:#337ab7; padding:10px; color:#fff; text-align:center;">Footer</div>
+    </div>
   </section>
 
-  <!-- Bài 8 -->
+  <!-- Bài 8: Thiết kế Layout kiểu Blog -->
   <section id="bai8">
     <h2>Bài 8: Thiết kế Layout kiểu Blog</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Tạo bố cục với:
-        <ul>
-          <li>Header (trên cùng, rộng 100%).</li>
-          <li>Sidebar (bên trái).</li>
-          <li>Main Content (chiếm 2/3 không gian).</li>
-          <li>Aside (bên phải).</li>
-          <li>Footer (dưới cùng).</li>
-        </ul>
-      </li>
-    </ul>
+    <div style="display:grid; grid-template-areas: 'header header header' 'sidebar main aside' 'footer footer footer'; grid-template-columns:1fr 2fr 1fr; gap:10px; padding:10px;">
+      <div style="grid-area:header; background-color:#5bc0de; padding:10px; color:#fff; text-align:center;">Header</div>
+      <div style="grid-area:sidebar; background-color:#f7e1a0; padding:10px; text-align:center;">Sidebar</div>
+      <div style="grid-area:main; background-color:#d9534f; padding:10px; color:#fff; text-align:center;">Main Content</div>
+      <div style="grid-area:aside; background-color:#f7e1a0; padding:10px; text-align:center;">Aside</div>
+      <div style="grid-area:footer; background-color:#5bc0de; padding:10px; color:#fff; text-align:center;">Footer</div>
+    </div>
   </section>
 
-  <!-- Bài 9 -->
+  <!-- Bài 9: Tạo bố cục theo mẫu (Navbar, Hero, 3 dịch vụ, Footer) -->
   <section id="bai9">
     <h2>Bài 9: Tạo bố cục theo mẫu</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Tạo giao diện với:
-        <ul>
-          <li>Thanh điều hướng (navbar).</li>
-          <li>Ảnh hero lớn (chiếm hết hàng đầu tiên).</li>
-          <li>3 ô dịch vụ nằm cạnh nhau.</li>
-          <li>Phần footer (cuối trang).</li>
-        </ul>
-      </li>
-    </ul>
+    <div style="display:grid; gap:10px; padding:10px;">
+      <div style="background-color:#222; color:#fff; text-align:center; padding:10px;">Navbar</div>
+      <div style="background-color:#ccc; text-align:center; padding:40px 10px;">Hero Image</div>
+      <div style="background-color:#e7e7e7; text-align:center; padding:20px;">Dịch vụ 1</div>
+      <div style="background-color:#e7e7e7; text-align:center; padding:20px;">Dịch vụ 2</div>
+      <div style="background-color:#e7e7e7; text-align:center; padding:20px;">Dịch vụ 3</div>
+      <div style="background-color:#222; color:#fff; text-align:center; padding:10px;">Footer</div>
+    </div>
   </section>
 
-  <!-- Bài 10 -->
+  <!-- Bài 10: Tạo bố cục theo mẫu (Chưa có nội dung chi tiết) -->
   <section id="bai10">
     <h2>Bài 10: Tạo bố cục theo mẫu</h2>
-    <p>Nội dung: (Chưa có nội dung chi tiết)</p>
+    <p>(Chưa có nội dung chi tiết)</p>
   </section>
 
-  <!-- Bài 11 -->
+  <!-- Bài 11: Thiết kế web đáp ứng (Menu cho Laptop, iPad, Responsive với max-width:600px) -->
   <section id="bai11">
     <h2>Bài 11: Thiết kế web đáp ứng</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Xây dựng menu ở màn hình Laptop và iPad.</li>
-      <li>Xây dựng menu responsive với (max-width: 600px).</li>
-    </ul>
+    <p><strong>Yêu cầu:</strong> Xây dựng menu cho Laptop, iPad và responsive với max-width:600px.</p>
+    <nav style="background-color:#555; padding:10px;">
+      <ul style="list-style:none; display:flex; justify-content:center; gap:15px; margin:0; padding:0;">
+        <li><a href="#" style="color:#fff; text-decoration:none;">Home</a></li>
+        <li><a href="#" style="color:#fff; text-decoration:none;">Giới thiệu</a></li>
+        <li><a href="#" style="color:#fff; text-decoration:none;">Dịch vụ</a></li>
+        <li><a href="#" style="color:#fff; text-decoration:none;">Liên hệ</a></li>
+      </ul>
+    </nav>
   </section>
 
-  <!-- Bài 12 -->
+  <!-- Bài 12: Thiết kế web đáp ứng (Responsive Grid với item thay đổi theo màn hình) -->
   <section id="bai12">
     <h2>Bài 12: Thiết kế web đáp ứng</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Tạo bố cục như sau:
-        <ul>
-          <li>Trên màn hình laptop: hiển thị 4 item 1 dòng.</li>
-          <li>Trên màn hình máy tính bảng: hiển thị 2 item 1 dòng.</li>
-          <li>Trên màn hình mobile: hiển thị 1 item 1 dòng.</li>
-        </ul>
-      </li>
-      <li>Cỡ chữ:
-        <ul>
-          <li>14px → Cỡ chữ nhỏ nhất (trên điện thoại).</li>
-          <li>16px → Kích thước chữ theo phần trăm màn hình.</li>
-          <li>18px → Cỡ chữ lớn nhất (trên màn hình lớn).</li>
-        </ul>
-      </li>
-    </ul>
+    <div style="display:grid; gap:10px; padding:10px;">
+      <div style="background-color:#e2e2e2; border:1px solid #999; padding:20px; text-align:center;">Item 1</div>
+      <div style="background-color:#e2e2e2; border:1px solid #999; padding:20px; text-align:center;">Item 2</div>
+      <div style="background-color:#e2e2e2; border:1px solid #999; padding:20px; text-align:center;">Item 3</div>
+      <div style="background-color:#e2e2e2; border:1px solid #999; padding:20px; text-align:center;">Item 4</div>
+      <div style="background-color:#e2e2e2; border:1px solid #999; padding:20px; text-align:center;">Item 5</div>
+      <div style="background-color:#e2e2e2; border:1px solid #999; padding:20px; text-align:center;">Item 6</div>
+      <div style="background-color:#e2e2e2; border:1px solid #999; padding:20px; text-align:center;">Item 7</div>
+      <div style="background-color:#e2e2e2; border:1px solid #999; padding:20px; text-align:center;">Item 8</div>
+    </div>
   </section>
 
-  <!-- Bài 13 -->
+  <!-- Bài 13: Thiết kế layout responsive chuyển 2 cột (max-width:1200px) và 1 cột (max-width:600px) -->
   <section id="bai13">
-    <h2>Bài 13: Thiết kế layout như sau</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Chuyển đổi layout có thể responsive thành 2 cột (max-width: 1200px) và 1 cột (max-width: 600px) khi thay đổi kích thước trình duyệt.</li>
-    </ul>
+    <h2>Bài 13: Thiết kế layout responsive chuyển 2 cột và 1 cột</h2>
+    <div style="display:grid; gap:10px; padding:10px;">
+      <div style="background-color:#dcdcdc; padding:20px; text-align:center;">Column 1</div>
+      <div style="background-color:#dcdcdc; padding:20px; text-align:center;">Column 2</div>
+      <div style="background-color:#dcdcdc; padding:20px; text-align:center;">Column 3</div>
+      <div style="background-color:#dcdcdc; padding:20px; text-align:center;">Column 4</div>
+    </div>
   </section>
 
-  <!-- Bài 14 -->
+  <!-- Bài 14: Thiết kế layout responsive với font-size và image thay đổi khi chuyển thành 1 cột -->
   <section id="bai14">
-    <h2>Bài 14</h2>
-    <p><strong>Yêu cầu:</strong></p>
-    <ul>
-      <li>Tạo bố cục như sau.</li>
-      <li>Thực hiện CSS thay đổi kích thước font chữ và hình ảnh khi chuyển thành 1 cột:
-        <ul>
-          <li>Responsive font size: font-size của body là 16px, khi responsive 1 cột thì font là 20px.</li>
-          <li>Responsive image: hình ảnh sẽ được thay đổi cùng tỉ lệ.</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Bài 15 -->
-  <section id="bai15">
-    <h2>Bài 15</h2>
-    <p>Nội dung: (Chưa có nội dung)</p>
-  </section>
-
-  <!-- Bài 16 -->
-  <section id="bai16">
-    <h2>Bài 16</h2>
-    <p>Nội dung: (Chưa có nội dung)</p>
+    <h2>Bài 14: Thiết kế layout responsive với font-size và image</h2>
+    <p><strong>Yêu cầu:</strong> Khi chuyển thành layout 1 cột, font-size của body tăng từ 16px lên 20px và hình ảnh thay đổi cùng tỷ lệ.</p>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <p>Đoạn văn mẫu để kiểm tra responsive font size.</p>
+      <img src="https://via.placeholder.com/600x400?text=Responsive+Image" alt="Responsive Image">
+    </div>
   </section>
 
   <footer>
