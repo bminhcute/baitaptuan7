@@ -2,74 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive 3-2-1 Column Layout</title>
+  <title>Responsive 3-2-1 Layout</title>
   <style>
-    /* Reset */
+    /* Reset and base styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
-    /* Basic styling for header, footer, aside, main */
     body {
       font-family: Arial, sans-serif;
     }
+
     header, footer {
       text-align: center;
       color: #fff;
       padding: 20px;
     }
     header {
-      background-color: #444; /* Dark gray */
+      background-color: #333; /* Dark gray */
     }
     footer {
-      background-color: #555; /* Slightly darker gray */
+      background-color: #4caf50; /* Green */
     }
-    aside, main {
-      padding: 20px;
-      color: #fff;
+
+    /* The container that holds aside1, main, aside2 */
+    .container {
+      display: flex;
+      min-height: 300px; /* for demo */
     }
+
+    /* Columns */
     .aside1 {
+      flex: 1;
       background-color: #ffca28; /* Yellowish */
+      padding: 20px;
+      color: #000;
+      text-align: center;
+    }
+    .main {
+      flex: 2;
+      background-color: #29b6f6; /* Light blue */
+      padding: 20px;
+      color: #000;
+      text-align: center;
     }
     .aside2 {
+      flex: 1;
       background-color: #ec407a; /* Pinkish */
-    }
-    main {
-      background-color: #29b6f6; /* Light blue */
-    }
-
-    /* Container for the three columns */
-    .middle-container {
-      display: flex;          /* By default, three columns side by side */
-      min-height: 300px;      /* Just for demo, can remove or adjust */
-    }
-    .aside1, .aside2, main {
-      flex: 1;                /* Each column shares available space equally */
+      padding: 20px;
+      color: #000;
+      text-align: center;
     }
 
-    /* ========== MEDIA QUERIES ========== */
-
-    /* Under 1200px => 2 columns (Aside1 + Main together, Aside2 below) */
+    /* Media query for max-width:1200px -> 2 columns (aside1 + main on one row, aside2 below) */
     @media (max-width: 1200px) {
-      .middle-container {
-        flex-wrap: wrap;         /* Allow columns to wrap */
+      .container {
+        flex-wrap: wrap; /* allow columns to wrap to next line */
       }
-      .aside1, main {
-        flex: 1 1 50%;           /* Together they form 2 columns in one row */
+      .aside1, .main {
+        flex: 1 1 50%; /* each take half the container width */
       }
       .aside2 {
-        flex: 1 1 100%;          /* Moves to its own row below */
+        flex: 1 1 100%; /* full width below */
       }
     }
 
-    /* Under 600px => 1 column (stack all: Aside1, Main, Aside2) */
+    /* Media query for max-width:600px -> 1 column (stack all vertically) */
     @media (max-width: 600px) {
-      .middle-container {
-        flex-direction: column;  /* Stack vertically */
+      .container {
+        flex-direction: column;
       }
-      .aside1, main, .aside2 {
+      .aside1, .main, .aside2 {
         flex: 1 1 100%;
       }
     }
@@ -81,24 +85,23 @@
     <h1>Header</h1>
   </header>
 
-  <div class="middle-container">
-    <aside class="aside1">Aside 1<br><br>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-      Repellendus, quam.
+  <div class="container">
+    <aside class="aside1">
+      <h2>Aside 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, saepe.</p>
     </aside>
 
-    <main>
-      Main Content<br><br>
-      This is the main content area. It might contain a long text passage:
+    <main class="main">
+      <h2>Main Content</h2>
       <p>
-        “Flexbox Layout (Flexible Box) is a layout model in CSS that allows 
-        items in a container to be aligned and distributed in space more efficiently.”
+        “Flexbox Layout (Flexible Box) is a layout model in CSS that allows items in a container 
+        to be aligned and distributed in space efficiently.”
       </p>
     </main>
 
-    <aside class="aside2">Aside 2<br><br>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-      Repellendus, quam.
+    <aside class="aside2">
+      <h2>Aside 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, saepe.</p>
     </aside>
   </div>
 
