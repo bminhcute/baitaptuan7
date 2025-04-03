@@ -2,37 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Grid Layout - 1:2:1 Columns</title>
+  <title>1:2:1 Grid Layout</title>
   <style>
-    /* To occupy full viewport height if desired */
-    html, body {
+    /* Reset */
+    * {
       margin: 0;
       padding: 0;
-      height: 100%;
+      box-sizing: border-box;
     }
     body {
-      background-color: #2ecc71; /* Green background */
-      color: #fff;              /* White text */
       font-family: Arial, sans-serif;
+      background-color: #2ecc71; /* Green background */
+      color: #fff;
+      min-height: 100vh; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     /* Grid container */
     .grid-container {
       display: grid;
-      /* 3 hàng: 100px, auto, 50px */
+      /* 3 rows: 100px, auto, 50px (as from the original requirement) */
       grid-template-rows: 100px auto 50px;
-      /* 3 cột với tỉ lệ 1 : 2 : 1 */
+      /* 3 columns with ratio 1:2:1 */
       grid-template-columns: 1fr 2fr 1fr;
-      /* Chỉ tạo khoảng cách hàng là 5px (không thêm khoảng cách cột) */
+      /* Row gap = 5px; you can also add column-gap if desired */
       row-gap: 5px;
-      /* Có thể thêm padding cho toàn bộ lưới nếu muốn */
+      /* Some padding and overall width */
       padding: 10px;
-      min-height: 100%;
+      width: 80%;
+      max-width: 1000px;
     }
 
-    /* Chung cho các ô */
+    /* Common styling for each cell */
     .grid-container > div {
-      border: 1px solid #fff;
+      border: 2px solid #fff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -41,7 +46,7 @@
       text-align: center;
     }
 
-    /* Ô ở giữa (hàng 2, cột 2) chứa văn bản dài */
+    /* Middle cell with a longer text block */
     .item5 {
       text-align: justify;
       line-height: 1.5;
