@@ -2,186 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Layout with 4-2-1 Items</title>
-  <style>
-    /* Base reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Default font size for large screens */
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 18px; /* Largest font on wide screens (laptop) */
-      background-color: #f4f4f4;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    /* Title */
-    h1 {
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    /* Grid container for the items */
-    .item-grid {
-      display: grid;
-      gap: 1rem;
-      /* By default (laptop), show 4 items per row */
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    /* Each item card */
-    .item-card {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .item-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .card-body {
-      padding: 0.75rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card-body h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-      color: #333;
-    }
-
-    .card-body p {
-      flex: 1;
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
-    }
-
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem;
-      border-top: 1px solid #ddd;
-    }
-
-    .like-btn {
-      background-color: #e91e63;
-      color: #fff;
-      border: none;
-      padding: 0.4rem 0.75rem;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .like-btn:hover {
-      background-color: #c2185b;
-    }
-    .price {
-      font-weight: bold;
-    }
-
-    /* Tablet screens: 2 items per row, font-size = 16px */
-    @media (max-width: 991px) and (min-width: 600px) {
-      body {
-        font-size: 16px; /* Medium font for tablets */
-      }
-      .item-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* Mobile screens: 1 item per row, font-size = 14px */
-    @media (max-width: 599px) {
-      body {
-        font-size: 14px; /* Smallest font for mobile */
-      }
-      .item-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <title>Bài 12 - Bố cục responsive</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <h1>Bài 12 - Responsive Layout</h1>
   <div class="container">
-    <h1>Responsive 4-2-1 Layout</h1>
-
-    <div class="item-grid">
-      <!-- Item 1 -->
-      <div class="item-card">
-        <img src="https://via.placeholder.com/300x200.png?text=Flower+1" alt="Flower 1">
-        <div class="card-body">
-          <h3>Pink Flower</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Repellendus officiis maiores consequatur quam.
-          </p>
-        </div>
-        <div class="card-footer">
-          <button class="like-btn">Like</button>
-          <div class="price">$47.99</div>
-        </div>
-      </div>
-      <!-- Item 2 -->
-      <div class="item-card">
-        <img src="https://via.placeholder.com/300x200.png?text=Flower+2" alt="Flower 2">
-        <div class="card-body">
-          <h3>Pink Flower</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Repellendus officiis maiores consequatur quam.
-          </p>
-        </div>
-        <div class="card-footer">
-          <button class="like-btn">Like</button>
-          <div class="price">$47.99</div>
-        </div>
-      </div>
-      <!-- Item 3 -->
-      <div class="item-card">
-        <img src="https://via.placeholder.com/300x200.png?text=Flower+3" alt="Flower 3">
-        <div class="card-body">
-          <h3>Pink Flower</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Repellendus officiis maiores consequatur quam.
-          </p>
-        </div>
-        <div class="card-footer">
-          <button class="like-btn">Like</button>
-          <div class="price">$47.99</div>
-        </div>
-      </div>
-      <!-- Item 4 -->
-      <div class="item-card">
-        <img src="https://via.placeholder.com/300x200.png?text=Flower+4" alt="Flower 4">
-        <div class="card-body">
-          <h3>Pink Flower</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Repellendus officiis maiores consequatur quam.
-          </p>
-        </div>
-        <div class="card-footer">
-          <button class="like-btn">Like</button>
-          <div class="price">$47.99</div>
-        </div>
-      </div>
-    </div><!-- /item-grid -->
-  </div><!-- /container -->
+    <div class="item">
+      <img src="https://via.placeholder.com/300x200" alt="Flower">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <button>Like</button>
+      <span>4.7 ★</span>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/300x200" alt="Flower">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <button>Like</button>
+      <span>4.7 ★</span>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/300x200" alt="Flower">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <button>Like</button>
+      <span>4.7 ★</span>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/300x200" alt="Flower">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <button>Like</button>
+      <span>4.7 ★</span>
+    </div>
+  </div>
 
 </body>
 </html>
