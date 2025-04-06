@@ -2,112 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive 3-2-1 Layout</title>
-  <style>
-    /* Reset and base styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    header, footer {
-      text-align: center;
-      color: #fff;
-      padding: 20px;
-    }
-    header {
-      background-color: #333; /* Dark gray */
-    }
-    footer {
-      background-color: #4caf50; /* Green */
-    }
-
-    /* The container that holds aside1, main, aside2 */
-    .container {
-      display: flex;
-      min-height: 300px; /* for demo */
-    }
-
-    /* Columns */
-    .aside1 {
-      flex: 1;
-      background-color: #ffca28; /* Yellowish */
-      padding: 20px;
-      color: #000;
-      text-align: center;
-    }
-    .main {
-      flex: 2;
-      background-color: #29b6f6; /* Light blue */
-      padding: 20px;
-      color: #000;
-      text-align: center;
-    }
-    .aside2 {
-      flex: 1;
-      background-color: #ec407a; /* Pinkish */
-      padding: 20px;
-      color: #000;
-      text-align: center;
-    }
-
-    /* Media query for max-width:1200px -> 2 columns (aside1 + main on one row, aside2 below) */
-    @media (max-width: 1200px) {
-      .container {
-        flex-wrap: wrap; /* allow columns to wrap to next line */
-      }
-      .aside1, .main {
-        flex: 1 1 50%; /* each take half the container width */
-      }
-      .aside2 {
-        flex: 1 1 100%; /* full width below */
-      }
-    }
-
-    /* Media query for max-width:600px -> 1 column (stack all vertically) */
-    @media (max-width: 600px) {
-      .container {
-        flex-direction: column;
-      }
-      .aside1, .main, .aside2 {
-        flex: 1 1 100%;
-      }
-    }
-  </style>
+  <title>Bài 13 - Responsive Layout</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Header</h1>
-  </header>
+  <header>Header</header>
 
   <div class="container">
-    <aside class="aside1">
-      <h2>Aside 1</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, saepe.</p>
-    </aside>
-
-    <main class="main">
-      <h2>Main Content</h2>
-      <p>
-        “Flexbox Layout (Flexible Box) is a layout model in CSS that allows items in a container 
-        to be aligned and distributed in space efficiently.”
-      </p>
+    <aside class="aside1">Aside 1</aside>
+    <main>
+      <p>Mô-đun Flexible Layout (Flexible Box)...</p>
     </main>
-
-    <aside class="aside2">
-      <h2>Aside 2</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, saepe.</p>
-    </aside>
+    <aside class="aside2">Aside 2</aside>
   </div>
 
-  <footer>
-    <p>Footer</p>
-  </footer>
+  <footer>Footer</footer>
 
 </body>
 </html>
