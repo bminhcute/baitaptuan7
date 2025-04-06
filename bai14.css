@@ -1,54 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-size: 16px;
-  margin: 0;
-  font-family: sans-serif;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
 }
 
 header, footer {
-  background-color: #90ee90;
-  text-align: center;
-  padding: 10px;
+    background-color: salmon;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: lightgreen;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
 }
 
-aside.aside1 {
-  background-color: #fdd835;
-  flex: 1;
-  padding: 10px;
-  min-width: 200px;
+aside {
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.aside1 {
+    background-color: yellow;
+}
+
+.aside2 {
+    background-color: hotpink;
 }
 
 main {
-  background-color: #81d4fa;
-  flex: 2;
-  padding: 10px;
-  min-width: 300px;
+    background-color: deepskyblue;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
 }
 
-aside.aside2 {
-  background-color: #f48fb1;
-  flex: 1;
-  padding: 10px;
-  min-width: 200px;
+main img {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 10px 0;
-}
+/* Responsive - max-width 800px: chuyển về 1 cột */
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
+    aside, main {
+        width: 100%;
+    }
 
-  body {
-    font-size: 20px;
-  }
+    body {
+        font-size: 20px;
+    }
 }
