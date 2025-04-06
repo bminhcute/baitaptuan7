@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .container {
@@ -14,9 +14,9 @@ body {
 }
 
 .card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 23%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 22%;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -31,6 +31,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 8px;
 }
 
 .card-footer button {
@@ -39,25 +40,24 @@ body {
   padding: 6px 12px;
   border-radius: 4px;
   cursor: pointer;
+  color: white;
 }
 
-/* Tablet: 2 items */
+/* Tablet */
 @media screen and (max-width: 992px) {
   .card {
-    width: 48%;
+    width: 45%;
   }
-
   body {
     font-size: 16px;
   }
 }
 
-/* Mobile: 1 item */
+/* Mobile */
 @media screen and (max-width: 600px) {
   .card {
     width: 100%;
   }
-
   body {
     font-size: 14px;
   }
