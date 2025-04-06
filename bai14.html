@@ -1,124 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Font & Image</title>
-  <style>
-    /* Reset defaults */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    /* Base body styling */
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 16px; /* Default font size */
-    }
-
-    header, footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    /* Container for aside1, main, aside2 */
-    .container {
-      display: flex;
-      min-height: 300px; /* For demo */
-    }
-
-    /* Aside 1 (left) */
-    .aside1 {
-      flex: 1;
-      background-color: #ffca28; /* Yellow */
-      padding: 1rem;
-      color: #000;
-      text-align: center;
-    }
-
-    /* Main content (middle) */
-    .main {
-      flex: 2;
-      background-color: #29b6f6; /* Light blue */
-      padding: 1rem;
-      color: #000;
-      text-align: center;
-    }
-
-    /* Aside 2 (right) */
-    .aside2 {
-      flex: 1;
-      background-color: #ec407a; /* Pinkish */
-      padding: 1rem;
-      color: #000;
-      text-align: center;
-    }
-
-    /* Image styling: responsive by default */
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 1rem auto; /* Center the image */
-      border: 2px solid #fff; /* Just for demo contrast */
-      border-radius: 4px;
-    }
-
-    footer {
-      background-color: #4caf50;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    /* Media query for max-width:600px => 1 column, font-size=20px */
-    @media (max-width: 600px) {
-      body {
-        font-size: 20px; /* Increase font size on smaller screens */
-      }
-      .container {
-        flex-direction: column;
-      }
-      .aside1, .main, .aside2 {
-        flex: 1 1 100%;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 14</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <h1>Header</h1>
-  </header>
-
+  <header>Header</header>
   <div class="container">
-    <aside class="aside1">
-      <h2>Aside 1</h2>
-      <p>Some text for aside 1.</p>
-    </aside>
-
-    <main class="main">
-      <h2>Main Content</h2>
-      <img src="https://via.placeholder.com/600x300?text=Sample+Image" alt="Sample">
-      <p>
-        “Flexbox Layout (Flexible Box) is a layout model in CSS that allows items in a container 
-        to be aligned and distributed in space more efficiently. 
-        When resizing the screen below 600px, this layout becomes one column, 
-        the font size increases to 20px, and the image remains responsive.”
-      </p>
+    <aside class="aside1">Aside 1</aside>
+    <main>
+      <p>Mô đun Flexbox Layout (Flexible Box)...</p>
+      <img src="https://via.placeholder.com/400x250" alt="Responsive image">
     </main>
-
-    <aside class="aside2">
-      <h2>Aside 2</h2>
-      <p>Some text for aside 2.</p>
-    </aside>
+    <aside class="aside2">Aside 2</aside>
   </div>
-
-  <footer>
-    <p>Footer</p>
-  </footer>
-
+  <footer>Footer</footer>
 </body>
 </html>
