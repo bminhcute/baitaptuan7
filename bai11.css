@@ -1,0 +1,74 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Thanh menu (navbar) */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Danh sách menu */
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* Mỗi mục trong menu */
+.nav-list li {
+  margin: 0 15px;
+}
+
+/* Liên kết trong menu */
+.nav-list li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+/* Hiệu ứng hover */
+.nav-list li a:hover {
+  background-color: #575757;
+}
+
+/* Nút menu ba gạch (hamburger) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  padding: 14px 16px;
+  cursor: pointer;
+  background-color: #333;
+  text-align: right;
+}
+
+/* Responsive: màn hình nhỏ hơn 600px */
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list li {
+    text-align: center;
+    margin: 0;
+  }
+}
