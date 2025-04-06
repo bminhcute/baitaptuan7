@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+}
+
+header, footer {
+  background-color: #90ee90;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  margin-top: 10px;
+}
+
+aside {
+  padding: 20px;
+  min-height: 200px;
+  color: black;
+}
+
+.aside1 {
+  background-color: yellow;
+  width: 20%;
+}
+
+main {
+  background-color: skyblue;
+  width: 60%;
+  padding: 20px;
+}
+
+.aside2 {
+  background-color: pink;
+  width: 20%;
+}
+
+/* Tablet: 2 cột */
+@media (max-width: 1200px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .aside1, .aside2 {
+    width: 50%;
+    order: 2;
+  }
+
+  main {
+    width: 100%;
+    order: 1;
+  }
+}
+
+/* Mobile: 1 cột */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .aside1, .aside2, main {
+    width: 100%;
+    order: unset;
+  }
+}
