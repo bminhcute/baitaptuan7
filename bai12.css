@@ -1,8 +1,9 @@
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  margin: 0;
   padding: 20px;
+  margin: 0;
+  background-color: #f8f8f8;
 }
 
 .container {
@@ -12,31 +13,46 @@ body {
 }
 
 .card {
-  border: 1px solid #ccc;
+  background-color: #fff;
+  border: 1px solid #ddd;
   padding: 10px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-.actions {
+.card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
-button {
-  background-color: palevioletred;
-  color: white;
+.card-footer button {
+  background-color: #c16796;
   border: none;
-  padding: 5px 10px;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
+.card-footer span {
+  font-size: 12px;
+  color: #333;
+}
+
+/* Tablet: 2 items */
+@media (max-width: 992px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -46,6 +62,7 @@ button {
   }
 }
 
+/* Mobile: 1 item */
 @media (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
@@ -56,6 +73,7 @@ button {
   }
 }
 
+/* Large screen: increase font */
 @media (min-width: 1200px) {
   body {
     font-size: 18px;
